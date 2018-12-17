@@ -1,7 +1,6 @@
 module github.com/clickyotomy/ext-ip
 
 require (
-	github.com/davecgh/go-spew v1.1.1
 	github.com/miekg/dns v1.1.1
 	golang.org/x/crypto v0.0.0-20181203042331-505ab145d0a9 // indirect
 	golang.org/x/net v0.0.0-20181217023233-e147a9138326 // indirect

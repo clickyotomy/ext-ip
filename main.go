@@ -7,10 +7,7 @@ import (
 	"os"
 
 	"github.com/clickyotomy/ext-ip/resolve"
-	"github.com/davecgh/go-spew/spew"
 )
-
-var spewConf = spew.ConfigState{Indent: "\t"}
 
 func usage() {
 	fmt.Fprintf(os.Stderr, "ext-ip: Fetch external IP address.\n")
