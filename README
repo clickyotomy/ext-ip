@@ -1,3 +1,5 @@
 ext-ip
 ------
 Queries Google's DNS name servers for the client's external IP address.
+
+To install, run: go get [-u] "github.com/clickyotomy/ext-ip"
