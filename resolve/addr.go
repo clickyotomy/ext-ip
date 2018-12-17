@@ -1,6 +1,6 @@
 // Package resolve queries Google's DNS name servers for
 // the client's external IP address.
-package resolve // import github.com/clickyotomy/resolve
+package resolve // import github.com/clickyotomy/ext-ip/resolve
 
 import (
 	"fmt"
