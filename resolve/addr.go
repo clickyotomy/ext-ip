@@ -53,7 +53,7 @@ func ExtIP() (string, time.Duration, error) {
 			addr = txt.Txt[0]
 			break
 		} else {
-			err = fmt.Errorf("type: type assetion failed: (%s)", addr)
+			err = fmt.Errorf("type: type assertion failed: (%s)", addr)
 			return "", time.Duration(-1), err
 		}
 	}
