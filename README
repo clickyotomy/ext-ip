@@ -1,5 +1,8 @@
 ext-ip
 ------
-Queries Google's DNS name servers for the client's external IP address.
+Queries Google's DNS to fetch the external IP address.
 
-To install, run: go get [-u] "github.com/clickyotomy/ext-ip"
+To install, run:
+    $ go get "github.com/clickyotomy/ext-ip"
+
+The binary executable will be available in `${GOPATH}/bin'.
