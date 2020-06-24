@@ -11,6 +11,7 @@ import (
 
 func usage() {
 	fmt.Fprintf(os.Stderr, "ext-ip: Fetch external IP address.\n")
+	os.Exit(0)
 }
 
 func main() {
