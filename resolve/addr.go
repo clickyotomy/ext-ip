@@ -14,7 +14,7 @@ const (
 	// This is (probably) a virtual IP for `ns{1,2,..,}.google.com'.
 	server = "ns.google.com:53"
 	record = dns.TypeTXT
-	target = "o-o.myaddr.l.google.com."
+	target = "o-o.myaddr.google.com."
 )
 
 // ExtIP fetches the external IP address of the client.
