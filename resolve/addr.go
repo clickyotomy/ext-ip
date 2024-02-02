@@ -53,14 +53,14 @@ func ExtIP() (string, time.Duration, error) {
 			addr = txt.Txt[0]
 			break
 		} else {
-			err = fmt.Errorf("type: type assertion failed: (%s)", addr)
+			err = fmt.Errorf("reflect: type assertion failed: (%s)", addr)
 			return "", time.Duration(-1), err
 		}
 	}
 
 	// Check if the returned IP address is valid.
 	if net.ParseIP(addr) == nil {
-		err = fmt.Errorf("net: invalid IP: %s", addr)
+		err = fmt.Errorf("net: invalid IP address: %s", addr)
 		return "", time.Duration(-1), err
 	}
 
