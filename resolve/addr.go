@@ -39,11 +39,11 @@ func ExtIP() (string, time.Duration, error) {
 	message.SetQuestion(target, record)
 
 	// Execute the query; check for errors.
-	result, rtt, err = client.Exchange(&message, server)
-	if err != nil {
+	if result, rtt, err = client.Exchange(&message, server); err != nil {
 		return "", time.Duration(-1), fmt.Errorf("net: %s", err)
 	}
-	if len(result.Answer) == 0 {
+
+	if len(result.Answer) <= 0 {
 		return "", time.Duration(-1), fmt.Errorf("dns: empty answer")
 	}
 
@@ -52,9 +52,6 @@ func ExtIP() (string, time.Duration, error) {
 		if txt, ok = rec.(*dns.TXT); ok {
 			addr = txt.Txt[0]
 			break
-		} else {
-			err = fmt.Errorf("reflect: type assertion failed: (%s)", addr)
-			return "", time.Duration(-1), err
 		}
 	}
 
